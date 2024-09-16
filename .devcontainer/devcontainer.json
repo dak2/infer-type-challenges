@@ -1,0 +1,31 @@
+{
+  "name": "infer-type-challenges container",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/usr/src",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "quickfix.biome": "explicit",
+          "source.organizeImports.biome": "explicit"
+        },
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    }
+  },
+  "postCreateCommand": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
+  "remoteUser": "vscode"
+}
