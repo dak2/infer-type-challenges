@@ -21,7 +21,7 @@
           "source.organizeImports.biome": "explicit"
         },
         "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true,
+        "files.trimFinalNewlines": true
       }
     }
   },
@@ -31,7 +31,7 @@
       "configureZshAsDefaultShell": true
     },
     "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0": {
-      // not installing plugins
+      // can not install plugins
       // "plugins": "git zsh-autosuggestions zsh-syntax-highlighting"
     }
   },

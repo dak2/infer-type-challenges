@@ -1,5 +1,5 @@
 #!/bin/zsh
 
-cp -f .devcontainer/shell/.zshrc ~/.zshrc
-
-echo "Zsh setup completed."
+# Setup .zshrc
+cp -f .devcontainer/shell/config/.zshrc ~/.zshrc
+echo "Setup completed."
