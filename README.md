@@ -1,1 +1,8 @@
-# infer-type-challenges
+```
+npm install
+npm run dev
+```
+
+```
+npm run deploy
+```
