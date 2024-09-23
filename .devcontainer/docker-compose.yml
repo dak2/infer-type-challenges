@@ -3,7 +3,6 @@ services:
     build: .
     volumes:
       - ..:/usr/src
-      - modules_data:/usr/src/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
     working_dir: /usr/src
 

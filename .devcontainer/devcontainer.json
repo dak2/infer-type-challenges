@@ -6,7 +6,12 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "biomejs.biome"
+        "biomejs.biome",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "shardulm94.trailing-spaces",
+        "YoavBls.pretty-ts-errors",
+        "eamodio.gitlens"
       ],
       "settings": {
         "editor.tabSize": 2,
@@ -16,7 +21,7 @@
           "source.organizeImports.biome": "explicit"
         },
         "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true
+        "files.trimFinalNewlines": true,
       }
     }
   },
@@ -24,8 +29,16 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
+    },
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0": {
+      // not installing plugins
+      // "plugins": "git zsh-autosuggestions zsh-syntax-highlighting"
     }
   },
-  "postCreateCommand": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "chmod +x .devcontainer/shell/setup.sh && .devcontainer/shell/setup.sh",
+  "postAttachCommand": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
   "remoteUser": "vscode"
 }
