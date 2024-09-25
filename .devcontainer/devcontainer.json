@@ -29,10 +29,6 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
-    },
-    "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh:0": {
-      // can not install plugins
-      // "plugins": "git zsh-autosuggestions zsh-syntax-highlighting"
     }
   },
   "mounts": [
