@@ -1,7 +1,7 @@
 {
   "name": "infer-type-challenges container",
   "dockerComposeFile": ["docker-compose.yml"],
-  "service": "app",
+  "service": "server",
   "workspaceFolder": "/usr/src",
   "customizations": {
     "vscode": {
