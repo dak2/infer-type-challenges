@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@hono/oidc-auth':
+        specifier: ^1.1.0
+        version: 1.1.0(hono@4.6.2)
       drizzle-orm:
         specifier: ^0.33.0
         version: 0.33.0(@cloudflare/workers-types@4.20240919.0)
@@ -497,6 +500,12 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
+  '@hono/oidc-auth@1.1.0':
+    resolution: {integrity: sha512-nOa15PlV0+xls/Q4Psx3j30xkYWI+T/bzM5LjXYSHD3okOw8CnqY2saq+1GKGVB8c1GgehFYaH95EOc+7HRY+A==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      hono: '>=3.*'
+
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
     engines: {node: '>=6.0.0'}
@@ -778,6 +787,9 @@ packages:
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+
+  oauth4webapi@2.17.0:
+    resolution: {integrity: sha512-lbC0Z7uzAFNFyzEYRIC+pkSVvDHJTbEW+dYlSBAlCYDe6RxUkJ26bClhk8ocBZip1wfI9uKTe0fm4Ib4RHn6uQ==}
 
   ohash@1.1.4:
     resolution: {integrity: sha512-FlDryZAahJmEF3VR3w1KogSEdWX3WhA5GPakFx4J81kEAiHyLMpdLLElS8n8dfNadMgAne/MywcvmogzscVt4g==}
@@ -1162,6 +1174,11 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
+  '@hono/oidc-auth@1.1.0(hono@4.6.2)':
+    dependencies:
+      hono: 4.6.2
+      oauth4webapi: 2.17.0
+
   '@jridgewell/resolve-uri@3.1.2': {}
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
@@ -1415,6 +1432,8 @@ snapshots:
   node-forge@1.3.1: {}
 
   normalize-path@3.0.0: {}
+
+  oauth4webapi@2.17.0: {}
 
   ohash@1.1.4: {}
 

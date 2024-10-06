@@ -8,6 +8,7 @@
     "remote:migration": "wrangler d1 migrations apply infer-type-challenges --remote"
   },
   "dependencies": {
+    "@hono/oidc-auth": "^1.1.0",
     "drizzle-orm": "^0.33.0",
     "hono": "^4.6.2"
   },
