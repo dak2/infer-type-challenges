@@ -1,14 +1,20 @@
 {
   "name": "src",
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "dev": "wrangler dev --live-reload src/index.tsx",
+    "deploy": "wrangler deploy --minify src/index.tsx",
+    "drizzle:generate": "drizzle-kit generate --config=./src/db/drizzle.config.ts",
+    "local:migration": "wrangler d1 migrations apply infer-type-challenges --local",
+    "remote:migration": "wrangler d1 migrations apply infer-type-challenges --remote"
   },
   "dependencies": {
+    "@hono/oauth-providers": "^0.6.1",
+    "drizzle-orm": "^0.33.0",
     "hono": "^4.6.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240529.0",
+    "drizzle-kit": "^0.24.2",
     "wrangler": "^3.78.12"
   }
 }
