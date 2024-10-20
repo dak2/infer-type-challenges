@@ -1,8 +1,8 @@
 {
   "name": "src",
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts",
+    "dev": "wrangler dev --live-reload src/index.tsx",
+    "deploy": "wrangler deploy --minify src/index.tsx",
     "drizzle:generate": "drizzle-kit generate --config=./src/db/drizzle.config.ts",
     "local:migration": "wrangler d1 migrations apply infer-type-challenges --local",
     "remote:migration": "wrangler d1 migrations apply infer-type-challenges --remote"
